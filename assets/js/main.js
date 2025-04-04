@@ -1,7 +1,7 @@
 /* 14 var */
 
 /* task1 */
-/* document.addEventListener('keydown', function (ev) {
+document.addEventListener('keydown', function (ev) {
     if (ev.altKey) {
         if (ev.key !== 'Alt') {
             switch (ev.key) {
@@ -29,7 +29,7 @@
                 console.log("вы нажали " + ev.key)
         }
     }
-}) */
+})
 
 /* task2 */
 document.addEventListener('keydown', function (ev) {
