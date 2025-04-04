@@ -49,15 +49,14 @@ document.addEventListener('keydown', function (ev) {
         }
     }
     else if (ev.shiftKey) {
-        switch (ev.key) {
-            case 's':
-                console.log('вы нажали Shift + S')
-                ev.preventDefault()
-                break
-            default:
-                console.log('вы нажали Shift + ' + ev.key)
-                ev.preventDefault()
-        }
+        if (ev.key !== 'Shift') {
+            switch (ev.key) {
+                case 'A':
+                    console.log('вы нажали Shift + а');
+                    break;
+                default:
+                    console.log('вы нажали Shift + ' + ev.key);
+            }
     }
     else if (ev.ctrlKey) {
         switch (ev.key) {
