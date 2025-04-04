@@ -88,5 +88,5 @@ document.addEventListener('keydown', function (ev) {
             }
         }
     }
-})
+});
 
