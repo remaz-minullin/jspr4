@@ -40,18 +40,20 @@ document.addEventListener('keydown', function (ev) {
     }
 
     if (ev.ctrlKey && ev.shiftKey) {
-        switch (ev.key) {
-            case 's':
-                console.log('сохраить Ctrl + Shift + S ')
-                ev.preventDefault()
-                break
-            case 'n':
-                console.log('создать новый файл Ctrl + Shift + N')
-                ev.preventDefault()
-                break
-            default:
-                console.log('нажали Ctrl + Shift + ' + ev.key)
-                ev.preventDefault()
+        if(ev.key !== 'Shift' && ev.key !== 'Ctrl') {
+            switch (ev.key) {
+                case 's':
+                    console.log('сохраить Ctrl + Shift + S ')
+                    ev.preventDefault()
+                    break
+                case 'n':
+                    console.log('создать новый файл Ctrl + Shift + N')
+                    ev.preventDefault()
+                    break
+                default:
+                    console.log('нажали Ctrl + Shift + ' + ev.key)
+                    ev.preventDefault()
+            }
         }
     }
     else if (ev.shiftKey) {
@@ -88,5 +90,5 @@ document.addEventListener('keydown', function (ev) {
             }
         }
     }
-});
+})
 
